@@ -1,0 +1,18 @@
+extends layout
+extends ../node_modules/jade-bootstrap/_bootstrap
+
+block body
+  +img-responsive("images/test1.png","The colenso Project")
+  +navbar("")
+    +nav_item("/") Home
+    +nav_item("/fileList")  View All Documents
+    +nav_item("/search/searchByString", "active") Search By String
+    +nav_item("/search/searchByXQuery") Search By XQuery
+  .container
+    h1 Search By String:
+    br
+    p| Search documents via strings of text
+  .container
+    form(name = "simple", action = "/search/searchStringResult", method = "get")
+      input("text", "query", "Search...", "", name = "query")
+      +submit("Search")

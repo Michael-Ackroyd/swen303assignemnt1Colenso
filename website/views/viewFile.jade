@@ -1,0 +1,16 @@
+extends layout
+extends ../node_modules/jade-bootstrap/_bootstrap
+
+block body
+  +img-responsive("images/test1.png","The colenso Project")
+  +navbar("")
+    +nav_item("/") Home
+    +nav_item("/fileList")  View All Documents
+    +nav_item("/search/searchByString") Search By String
+    +nav_item("/search/searchByXQuery") Search By XQuery
+
+  .container
+    br
+    p| !{file}
+  .container
+    <a href="/viewRaw" class="btn btn-primary" role="button">View Raw TEI</a>

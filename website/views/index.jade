@@ -1,0 +1,28 @@
+extends layout
+extends ../node_modules/jade-bootstrap/_bootstrap
+
+block body
+  +img-responsive("images/test1.png","The colenso Project")
+  +navbar("")
+    +nav_item("/", "active") Home
+    +nav_item("/fileList")  View All Documents
+    +nav_item("/search/searchByString") Search By String
+    +nav_item("/search/searchByXQuery") Search By XQuery
+  .container
+    h1 Welcome to the Colenso Project
+  .container
+    p| the intent of the Colenso Project is to spark wonder and intrest to discovor more about William Colensos Life.
+    p| to find out more vist the following sites or dive in and read the many letters in our database which will unfold Williams life.
+  row
+    .col-md-4.col-sm-6.col-xs-12
+      .panel.panel-default
+        .panel-heading <a href="https://en.wikipedia.org/wiki/William_Colenso">Willam Colenso WikiPage</a> 
+        .panel-body Born in Penzance, Cornwall, he was the cousin of John William Colenso, Bishop of Natal. He trained as a printer's apprentice then travelled to New Zealand in 1834 to work for the Church Missionary Society as a printer/missionary.
+
+    .col-md-4.col-sm-6.col-xs-12
+      .panel.panel-default
+        .panel-heading <a href="http://www.williamcolenso.co.nz/"> home of the Colenso Project </a>  
+        .panel-body  The Colenso Society, Victoria University of Wellington and MTG Hawke's Bay are delighted to announce the establishment of the Colenso Project. This exciting new initiative seeks to build on the blossoming national and international interest in William Colenso’s life and ideas as the result of the William Colenso Bicentenary Celebrations in Hawke’s Bay in 2011, and a body of new publications and research.
+  
+
+ 

@@ -1,0 +1,18 @@
+extends layout
+extends ../node_modules/jade-bootstrap/_bootstrap
+
+block body
+  +img-responsive("images/test1.png","The colenso Project")
+  +navbar("")
+    +nav_item("/") Home
+    +nav_item("/fileList")  View All Documents
+    +nav_item("/search/searchByString", "active") Search By String
+    +nav_item("/search/searchByXQuery") Search By XQuery
+  .container
+    h2 String Search Results For '#{searchString}':
+    h3 Search Returned '#{numResults}' Results
+
+    .container
+      each file in files
+        li.list-group-item
+          a(href = "/viewFile?file=" + file) !{file}
